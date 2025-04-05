@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f2dce8;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -76,6 +76,7 @@ button {
   margin: auto 0;
   text-align: center;
   margin-bottom: 5%;
+  margin-top: -100px;
 }
 
 .reproducir button {
@@ -98,85 +99,84 @@ button {
 }
 
 .contador {
+  width: calc(100% - 10px);
   position: relative;
   text-align: center;
   left: 50%;
   transform: translate(-50%);
-  width: 90%;
-  height: 100%;
-  margin-bottom: 15%;
+  margin-bottom: 50px;
 }
 
 .contador p {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Great Vibes", cursive;
-  padding: 10px;
-  margin-bottom: 10%;
-  margin-top: 10%;
+  padding: 11px;
+  margin: 0;
+  color: #bf7839;
 }
 
 .fecha {
   position: relative;
   text-align: center;
-  color: #000000;
-  font-size: 50px;
-  margin-bottom: 10%;
-  font-family: "Great Vibes", cursive;
+  color: #d9af62;
+  font-size: 40px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .conteo {
-  font-size: 40px;
-  font-family: "Times New Roman", Times, serif;
-  color: rgb(0, 0, 0);
-  margin-bottom: 5%;
+  font-size: 45px;
+  color: #bf7839;
+  margin-top: -15px;
   font-family: "Great Vibes", cursive;
-}
-
-section {
-  width: 100%;
-  padding: 5px;
-  border-radius: 10px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  -webkit-animation: shadow-drop-2-center 0.4s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 table {
-  border-collapse: collapse;
   width: 100%;
-  text-align: center;
+  border-collapse: separate;
+  border-spacing: 10px; /* Espacio entre celdas */
 }
 
-td {
-  border: 3px solid #ffffff;
-  border-bottom: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: #f1cb9d;
-  width: 20%;
-  color: #000000;
-  padding: 5px;
-  padding-top: 20px;
-  font-size: 30px;
-  text-align: center;
-  justify-content: center;
-}
-
+td,
 th {
-  border: 3px solid #ffffff;
-  border-top: none;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: #f1cb9d;
-  color: #000000;
+  background-color: hsl(0, 0%, 100%); /* Fondo oscuro para las celdas */
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  justify-content: center;
-  padding: 5px;
-  padding-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+td .label {
   font-size: 20px;
-  font-family: "Great Vibes", cursive;
+  font-weight: bold;
+  font-family: "Italiana", serif;
+  color: #bf7839; /* Color del texto */
+  margin-top: 10px; /* Espacio entre el número y el texto */
+}
+
+/* Estilos para los números */
+td span {
+  display: inline-block;
+  min-width: 60px; /* Ancho mínimo para asegurar que los números no se amontonen */
+  padding: 10px;
+  background: linear-gradient(
+    75deg,
+    #bf7839,
+    /* Dorado oscuro */ #bf8c4e,
+    /* Bronce */ #d9af62,
+    /* Oro medio */ #f2dc99,
+    /* Oro claro */ #f2d680,
+    /* Brillo dorado */ #f2dc99,
+    /* Oro claro */ #d9af62,
+    /* Oro medio */ #bf8c4e,
+    /* Bronce */ #bf7839 /* Dorado oscuro */
+  ); /* Color de fondo para los números */
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .bienvenida {
@@ -193,12 +193,10 @@ th {
   width: 100%;
 }
 
-.bienvenida small {
-  margin-left: 50%;
-}
-
 .bienvenida .card {
-  border: 5px ridge #f1cb9d;
+  border: 5px ridge #bf93a8;
+  background-color: #f2dce8;
+  color: #000000;
 }
 
 .bienvenida h5 {
@@ -208,7 +206,7 @@ th {
 
 .bienvenida p {
   text-align: center;
-  line-height: 1rem;
+  line-height: 30px;
 }
 
 @keyframes moveB {
@@ -252,19 +250,18 @@ th {
 .tituloCronograma h2 {
   font-size: 50px;
   font-family: "Great Vibes", cursive;
-  color: #000000;
+  color: #bf8c4e;
   margin-bottom: 5%;
 }
 
 .tituloCronograma p {
-  color: #000000;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
   margin-bottom: 5%;
 }
 
 .tituloCronograma svg {
-  color: #000000;
+  color: #bf8c4e;
   width: 50px;
   height: 50px;
 }
@@ -336,7 +333,18 @@ th {
 
 .text-box {
   padding: 10px 20px;
-  background: #ffffff;
+  background: linear-gradient(
+    75deg,
+    #bf7839,
+    /* Dorado oscuro */ #bf8c4e,
+    /* Bronce */ #d9af62,
+    /* Oro medio */ #f2dc99,
+    /* Oro claro */ #f2d680,
+    /* Brillo dorado */ #f2dc99,
+    /* Oro claro */ #d9af62,
+    /* Oro medio */ #bf8c4e,
+    /* Bronce */ #bf7839 /* Dorado oscuro */
+  ); /* Color de fondo para los números */
   position: relative;
   border-radius: 10px;
   font-size: 15px;
@@ -358,7 +366,18 @@ h5 {
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #ffffff;
+  background: linear-gradient(
+    75deg,
+    #bf7839,
+    /* Dorado oscuro */ #bf8c4e,
+    /* Bronce */ #d9af62,
+    /* Oro medio */ #f2dc99,
+    /* Oro claro */ #f2d680,
+    /* Brillo dorado */ #f2dc99,
+    /* Oro claro */ #d9af62,
+    /* Oro medio */ #bf8c4e,
+    /* Bronce */ #bf7839 /* Dorado oscuro */
+  ); /* Color de fondo para los números */
   left: 15%;
   top: 0;
 
@@ -406,7 +425,7 @@ h5 {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #ffffff;
+  border-right: 15px solid #bf7839;
   left: -15px;
 }
 
@@ -414,7 +433,8 @@ h5 {
   position: relative;
   text-align: center;
   padding: 5%;
-  background-color: #f2f2f2;
+  background-color: #bf93a8;
+  color: #ffffff;
   margin-top: 10%;
   margin-bottom: 10%;
   width: 100%;
@@ -439,47 +459,9 @@ h5 {
   }
 }
 
-.colores {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8%;
-  margin-top: 20px;
-}
-
-.color {
-  margin-top: 3%;
-  margin-bottom: 3%;
-  border: 1px solid #9e9e9e;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.c1 {
-  background-color: #ffe5d9;
-}
-
-.c2 {
-  background-color: #ffd7ba;
-}
-
-.c3 {
-  background-color: #fec89a;
-}
-
-.c4 {
-  background-color: #f9a27c;
-}
-
-.c5 {
-  background-color: #e38f65;
-}
-
 .tituloV {
   font-size: 50px;
-  color: black;
+  color: #ffffff;
   font-family: "Great Vibes", cursive;
   margin-bottom: 10px;
 }
@@ -560,11 +542,11 @@ h6 {
 
 .card {
   margin: 0 auto;
-  background-color: #e0d4ae;
+  background-color: #f2dce8;
   width: 0%;
   height: 250px;
   margin-bottom: 10%;
-  border: 3px ridge #dcb27f;
+  border: 3px ridge #bf93a8;
 
   -webkit-animation: shadow-drop-2-center 0.4s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
