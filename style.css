@@ -432,9 +432,8 @@ h5 {
 .vestimenta {
   position: relative;
   text-align: center;
-  padding: 5%;
-  background-color: #bf93a8;
-  color: #ffffff;
+  padding: 20px;
+  color: #000000;
   margin-top: 10%;
   margin-bottom: 10%;
   width: 100%;
@@ -461,7 +460,7 @@ h5 {
 
 .tituloV {
   font-size: 50px;
-  color: #ffffff;
+  color: #000000;
   font-family: "Great Vibes", cursive;
   margin-bottom: 10px;
 }
@@ -486,6 +485,10 @@ h6 {
   view-timeline-axis: block;
   animation-timeline: --container7;
   animation-name: moveC;
+
+  button {
+    margin-bottom: 20px;
+  }
 }
 
 .ubicaciones h5 {
@@ -496,16 +499,6 @@ h6 {
 .ubicaciones p {
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
-}
-
-.ubicaciones h6 {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-
-.nota {
-  margin-bottom: 5%;
-  margin-top: -2%;
 }
 
 @-webkit-keyframes shadow-drop-2-center {
