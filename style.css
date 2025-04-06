@@ -268,6 +268,7 @@ td span {
 
 .tituloC {
   position: relative;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -279,12 +280,16 @@ td span {
 
 .timeline p {
   line-height: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22;
 }
 
 .container {
   padding: 20px;
   position: relative;
   width: 65%;
+  color: #ffffff;
 }
 
 @keyframes movedown {
@@ -334,7 +339,7 @@ td span {
 .text-box {
   padding: 10px 20px;
   background: linear-gradient(
-    75deg,
+    145deg,
     #bf7839,
     /* Dorado oscuro */ #bf8c4e,
     /* Bronce */ #d9af62,
@@ -810,4 +815,53 @@ h6 {
 
 .botones button {
   margin-bottom: 20px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+.grid-item {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ddd;
+  border: 3px solid #bf93a8;
+  box-shadow: #8c6179 0px 0px 5px 0px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Tamaños bento */
+.big {
+  grid-column: span 6;
+  grid-row: span 3;
+}
+.wide {
+  grid-column: span 6;
+  grid-row: span 4;
+}
+.tall {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.square {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  .bento-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 80px;
+  }
 }
